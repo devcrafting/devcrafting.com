@@ -1,0 +1,231 @@
+---
+
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="description" content="DevCrafting web site & blog, about all sort of things around software development">
+	<meta name="author" content="Clément Bouillier">
+	<meta rel="canonical" href="/en/blog/2018/02-history-of-a-monolith-part2bis/" />
+	<link rel="icon" type="image/png" href="/images/devCraftingFavIcon.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="/styles/custom.css" />
+	<link rel="stylesheet" href="/styles/FSharpFormatting/style.css" />
+	<title>History of a monolith: technical evolution with the rise of keywords - DevCrafting</title>
+
+	 
+</head>
+
+<body>
+	<div id="cookie-banner" style="display:none;">
+		<div id="cookie-banner-message">
+			Ce site utilise Google Analytics. En continuant à naviguer, vous nous autorisez à déposer un cookie à des fins de mesure
+			d'audience.
+			<a href="javascript:tagAnalyticsCNIL.CookieConsent.showInform()">En savoir plus ou s'opposer</a>.
+		</div>
+	</div>
+	<div id="inform-and-ask" style="display:none;">
+		<div id="inform-and-consent">
+			<div><b>Les cookies Google Analytics</b></div>
+			<div>
+                Ce site utilise des cookies de Google Analytics, ces cookies nous aident à identifier le contenu qui vous interesse le
+				plus ainsi qu'à repérer certains dysfonctionnements. Vos données de navigations sur ce site sont envoyées à Google Inc.
+            </div>
+			<div>
+                <button id="optout-button" name="optout" onclick="tagAnalyticsCNIL.CookieConsent.gaOptout();">S'opposer</button>
+				<button name="cancel" onclick="tagAnalyticsCNIL.CookieConsent.hideInform()">Accepter</button>
+            </div>
+        </div>
+        <div id="aknowledge-optout" style="display:none">
+            Nous avons bien pris en compte votre souhait de ne pas envoyer vos données de navigation à Google Inc.<br/>
+            <small>NB: ce message va s'effacer tout seul au bout de 5 secondes.</small>
+        </div>
+	</div>
+	<header>
+		<nav class="navbar navbar-devcrafting">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dc-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<a class="navbar-brand" href="/en/">
+						<img class="devcrafting-small-logo" alt="DevCrafting" src="/images/devCraftingLogoDarkSmall.png" />
+						<img class="devcrafting-big-logo" alt="DevCrafting" src="/images/devCraftingLogoDarkTiny.png" />
+					</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="dc-navbar-collapse">
+					<ul class="nav navbar-nav">
+						 
+						<li><a href="/en/services/">Services</a></li>
+						  
+						<li><a href="/en/blog/">Blog</a></li>
+						  
+						<li><a href="/en/contact/">Contact</a></li>
+						 
+					</ul>
+					<div class="navbar-right">
+						<p class="social-links">
+							<a class="fa fa-twitter" title="Twitter @clem_bouillier" href="https://twitter.com/clem_bouillier"></a>
+							<a class="fa fa-github" title="GitHub @devcrafting" href="https://github.com/devcrafting"></a>
+							<a class="fa fa-linkedin" title="Linked In" href="https://www.linkedin.com/in/clementbouillier"></a>
+							<a class="fa fa-rss" title="RSS en" href="/en/rss.xml"></a>
+						</p>
+						
+						<p class="lang-switcher">
+							<span class="lang-mobile-only">Lang:</span> 
+							<a href="/en/blog/2018/02-history-of-a-monolith-part2bis/">EN</a> 
+						</p>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-9">
+				
+<article itemscope itemtype="http://schema.org/Article">
+    <h1 itemprop="headline">History of a monolith: technical evolution with the rise of keywords</h1>
+    <div class="row">
+        <div class="col-sm-6 col-md-6" itemprop="keywords">
+            <span class="fa fa-tags"></span>
+            
+                <a href="/en/tag/legacy/" class="label label-default">legacy</a>
+            
+                <a href="/en/tag/architecture/" class="label label-default">architecture</a>
+            
+                <a href="/en/tag/DDD/" class="label label-default">DDD</a>
+            
+                <a href="/en/tag/CQRS/" class="label label-default">CQRS</a>
+            
+                <a href="/en/tag/refactoring/" class="label label-default">refactoring</a>
+            
+            <span class="fa fa-comments"></span>
+<a href="http://www.devcrafting.com/en/blog/2018/02-history-of-a-monolith-part2bis/#disqus_thread">Leave a comment</a>
+
+        </div>
+        <div class="devcrafting-mobile-text-right col-sm-6 col-md-6">
+            <!-- TODO: nb comments + link => Disqus -->
+            <span class="fa fa-clock-o"></span>
+            <time itemprop="datePublished" datetime="2018-02-26T00:00:00.0000000">
+            Monday, February 26, 2018
+            </time>
+        </div>
+    </div>
+    <div class="devcrafting-article-body" itemprop="articleBody">
+    <p>In the <a href="/en/blog/2018/01-history-of-a-monolith-part2/">previous part of this series</a>, I focused on organisational issues we had and solutions we found when I cameback in 2009 on the monolith project we started at the end of 2005. In this post, I focus on technical issues and solutions.</p>
+<h2>Legacy technical choices, first refactoring</h2>
+<img alt="Questions about technical choices" src="/images/wondering.jpg" class="img-float-left"/>
+<p>Technically, when I came back, it was still the architecture set up in 2005. I was even surprised that it was so religiously applied. It suffered from lots of code smells: God classes, lots of manager/services long classes, anemic model...we also had performance issues. Web Forms was reaching obsolescence with the rise of MVC pattern.</p>
+<p>The performance problem was first tackled trying to review every SQL queries. We removed lots of "SELECT N+1" smells (you make a query with N results and one additional request for each result). We removed lots of code duplication (huge data access with lots of similar findXXX methods). We optimized queries' execution plans with indexes. We considered "SELECT N+1" and duplication was caused by the legacy home-made ORM, we tried NHibernate. But without experience and fear of impacts, we gave up and we started our own abstraction on top of the legacy ORM.</p>
+<p>We called it "Search Criteria" and we added the concept of "Fetching Depth" to load object graph eagerly. It was really efficient to reduce performance issue and make our Data Access more predictable, we were quite satisfied even if it was a bit complex to grasp for newcomers. Today, after years of feedbacks, it seems it is far too generic, leaking in upper layers, and it ends up with something very complex.</p>
+<p>I repeated this on another contract in the next years abstracting and encapsulating Entity Framework, with the same conclusion. In fact, I would even say that there is no good solution for complex querying needs when you use the same model for reading and writing things. I prefer to segregate read and write models, that's what <a href="https://cqrs.wordpress.com/documents/cqrs-introduction/">CQRS</a> is about. At this time, even if I started early to discuss with <a href="https://twitter.com/thinkb4coding">Jérémie Chassaing</a> at "CQRS beers" in Paris (around 2009) and saw <a href="https://twitter.com/gregyoung">Greg Young</a> starting to talk about CQRS, I was unconfortable with the idea of "potentially desynchronized" (eventually consistent) models. I was thinking it was very complicated, but the solution we found was probably even more complicated.</p>
+<h2>Huge refactoring started</h2>
+<img alt="Nuclear explosion to illustrate the huge refactoring" src="/images/nuclear-explosion.png" class="img-float-left"/>
+<p>Moreover business was asking for a major rework on the core model: clients were modelled with 2 hard coded levels and company organization was modelled with a hierarchy. The new model has to allow clients' hierarchy to represent real subdivision in entities of big companies (like Microsoft for example) and matrix form of internal organisation (internal entities can have several management entities).</p>
+<p>We decided to start a huge refactoring with a dedicated budget negociated with the business to allow to make the rework they asked for. We changed way too much things and ended in a very long-term refactoring. Even if we managed to deliver it, I would not recommend it anymore.</p>
+<p>Instead of hard coded (static) dependencies relying on Singleton pattern, we also added Dependency Inversion and Unity as dependency inversion/inversion of control (DI/IoC) container. Other huge refactorings were mainly around "some sort of" DDD (see below).</p>
+<h2>Introduction of some "sort of" DDD</h2>
+<img alt="Blue Book on Domain Driven Design by Eric Evens" src="/images/ddd.jpg" class="img-float-left"/>
+<p>As I said, I started chatting about DDD and CQRS in 2008/2009 in meetups in Paris, it was totally new for me. The <a href="">Blue Book from Eric Evans</a> was quite mysterious and I grasped only few bits, mostly tactical bits...and I completely missed the strategic view of DDD as most of  beginners. On CQRS, I was sceptical about two separated models. <a href="">Udi Dahan published its article on Domain Events</a>, I really liked it and made it a central piece in the architecture refactoring. But we used them only as a way to decouple persistance from business logic.</p>
+<p>So basically, we had SearchCriteria for reading objects graphs and Commands and Events in the same objects graph model. We totally missed the point of Aggregate and context boundaries, then we had a huge object graph with inter-related non-anemic domain objects (i.e data + behaviors together). CQRS and even more Event Sourcing were gave up given our low maturity and fears on these concepts.</p>
+<p>Again the monolith was hurting with a way too big single domain model. We could discuss what if we splitted things keeping a single monolith. I never saw a (big enough) monolith staying well structured in the long term. I agree we can build a well structured monolith in one-shot, still what about its evolution over everal years and team turnover.</p>
+<h2>The "ultimate" error: distributed &amp; transactional cache of an objects graph</h2>
+<img alt="'Gas factory' representing complexity of the cache solution" src="/images/gas-factory.jpg" class="img-float-left"/>
+<p>Even if we worked a lot on performance, we were still experiencing some issues, so we decided to try the "ultimate solution": build a cache...As we were very conservative about the single object graph model, we started building a distributed and transactional cache of the entire object graph...</p>
+<p>Basically, cache was objects graph loaded in memory of each server, managing an optimistic concurrency model both on each node in memory and distributed across nodes. Synchronisation of nodes was based on events we serialized in SQL database. Initially, the idea was to be able to load it incrementally, but very quickly, we gave up and we ended up with a full loading taking 5 to 10 minutes at application startup. It took some time to tweak it to an almost stable state, with some remaining odd behaviors (then we add to restart to reload cache, some times a week). By the way, the performance gain was really good.</p>
+<p>With time passing and team turnover, it became more and more complex and no one really mastered how it works. Today, it is still "working", but it is the thing to avoid to modify and it fosters lots of critiques (quite justified indeed). It makes difficult to modify business model since it is tightly coupled to this cache.</p>
+<p>Stepping back, I would say that we made the "ultimate error" with this very complex cache. Cache must be something light and decoupled mostly only to query read models. We often say that CQRS read model is the "perfect cache", since you must model your reading need with the most efficient model for reading, it is dedicated to read and you can focus on performance if it is essential. I think it would have been a much better solution for the recurring performance problems we had with our complex querying needs. Performance must not be an argument for CQRS, rather a bonus side-effect.</p>
+<p>Cache is a typical solution we find in lots of monolithic applications. Again, it is possible to avoid it in monolith, still I think temptation of such global solution is bigger.</p>
+<h2>Then I quit again...</h2>
+<p>Leaving Paris to Lyon, I quit the project in March 2012. The team was around 15 developers at this time, and it was promised to grow quickly again with new features to add...still, it was not my last comeback. Did the monolith keep growing? Story to be continued in another post...</p>
+
+
+
+    </div>
+    <!-- DISQUS integration -->
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+    this.page.url = 'http://www.devcrafting.com/en/blog/2018/02-history-of-a-monolith-part2bis/';
+    //this.page.identifier = PAGE_IDENTIFIER; 
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//devcrafting-1.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</article>
+<script id="dsq-count-scr" src="//devcrafting-1.disqus.com/count.js" async></script>
+
+
+			</div>
+			<div class="col-sm-3">
+				<p>
+					<a class="twitter-timeline" data-theme="dark" data-link-color="#FAB81E" height="500" href="https://twitter.com/clem_bouillier">Tweets de Clément Bouillier</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<h4>Contact &amp; about</h4>
+					<p>This site is hosted on GitHub and is generated using <a href="https://github.com/tpetricek/FSharp.Formatting">F# Formatting</a> and <a href="http://dotliquidmarkup.org/">DotLiquid</a>. It was mostly inspired by <a href="http://tomasp.net">tomasp.net</a>,
+						created by <a href="https://github.com/tpetricek">Tomas Petricek</a>, with some F# code copied from <a href="https://github.com/tpetricek/tomasp.net">his site source code</a>.
+						For more info, see the <a href="https://github.com/devcrafting/devcrafting.github.io">website source on GitHub</a>.
+					</p>
+					<p>Please submit <a href="https://github.com/devcrafting/devcrafting.github.io/issues">issues &amp; corrections on GitHub</a>. Use <a href="https://github.com/devcrafting/devcrafting.github.io/pulls">pull requests</a> for minor corrections only.</p>
+					<ul>
+						<li><i class="fa fa-twitter"></i> Twitter: <a href="http://twitter.com/clem_bouillier">@clem_bouillier</a></li>
+						<li><i class="fa fa-github"></i> GitHub: <a href="https://github.com/devcrafting">@devcrafting</a></li>
+						<li><i class="fa fa-envelope"></i> Email: <a href="mailto:clement.bouillier@devcrafting.com">clement.bouillier@devcrafting.com</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<h4>License</h4>
+					<p>Unless explicitly mentioned, all articles on this site are licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Share Alike</a>.
+						All source code samples are licensed under Apache 2.0.
+					</p>
+					<p style="text-align:center;margin-top:15px;"><img src="/images/cc-by-sa.png" alt="CC BY SA License logo" /></p>
+					<h4>Privacy</h4>
+					<a href="javascript:tagAnalyticsCNIL.CookieConsent.gaOptout()">Click here</a> to suppress audience measure tool from
+					Google.
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+	<script src="/scripts/main.js"></script>
+	<script src="/scripts/cookies.js"></script>
+	<script>
+        tagAnalyticsCNIL.CookieConsent = tagAnalyticsCNIL.CookieConsentBuilder('UA-52462933-1');
+        tagAnalyticsCNIL.CookieConsent.start();
+    </script>
+	<script id="dsq-count-scr" src="//devcrafting-1.disqus.com/count.js" async></script>
+
+</body>
+
+</html>

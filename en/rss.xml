@@ -4,6 +4,16 @@
     <link>http://www.devcrafting.com</link>
     <description>Articles about software craftsmanship, Agile, software architecture and design</description>
     <item>
+      <title>History of a monolith: technical evolution with the rise of keywords</title>
+      <link>http://www.devcrafting.com/en/blog/2018/02-history-of-a-monolith-part2bis/</link>
+      <guid>http://www.devcrafting.com/en/blog/2018/02-history-of-a-monolith-part2bis/</guid>
+      <pubDate>Sun, 25 Feb 2018 23:00:00 GMT</pubDate>
+      <description>&lt;p&gt;In the &lt;a href="/en/blog/2018/01-history-of-a-monolith-part2/"&gt;previous part of this series&lt;/a&gt;, I focused on organisational issues we had and solutions we found when I cameback in 2009 on the monolith project we started at the end of 2005. In this post, I focus on technical issues and solutions.&lt;/p&gt;
+
+
+</description>
+    </item>
+    <item>
       <title>History of a monolith: organisation evolution over the years</title>
       <link>http://www.devcrafting.com/en/blog/2018/01-history-of-a-monolith-part2/</link>
       <guid>http://www.devcrafting.com/en/blog/2018/01-history-of-a-monolith-part2/</guid>
