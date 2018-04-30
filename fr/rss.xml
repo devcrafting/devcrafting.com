@@ -4,6 +4,17 @@
     <link>http://www.devcrafting.com</link>
     <description>Articles about software craftsmanship, Agile, software architecture and design</description>
     <item>
+      <title>La "schizophrénie" autour des outils et des processus</title>
+      <link>http://www.devcrafting.com/fr/blog/2018/04-la-schizophenie-des-outils-et-des-process/</link>
+      <guid>http://www.devcrafting.com/fr/blog/2018/04-la-schizophenie-des-outils-et-des-process/</guid>
+      <pubDate>Sun, 29 Apr 2018 22:00:00 GMT</pubDate>
+      <description>&lt;p&gt;Ouh les gros mots "outils" et "processus", surtout depuis que l'agilité est devenue populaire dans notre industrie. Parler de cela n'est pas simple. C'est un sujet sensible, voire polémique, et à mon sens, surtout en raison de certaines pratiques managériales "déviantes" associées (amalgamées?) aux outils et aux processus.&lt;/p&gt;
+&lt;p&gt;Je propose dans cet article de mettre au clair mon ressenti sur tout cela. Merci de ne pas prendre tout cela de manière péremptoire ou catégorique de ma part. Le style est volontairement un peu provocateur pour susciter une réaction (positive). On verra pourquoi je parle de "schizophrénie".&lt;/p&gt;
+
+
+</description>
+    </item>
+    <item>
       <title>Refactoring de code legacy : "God class" et quelques autres techniques</title>
       <link>http://www.devcrafting.com/fr/blog/2017/02-refactoring-de-code-legacy-part-3-god-class-et-autres-techniques/</link>
       <guid>http://www.devcrafting.com/fr/blog/2017/02-refactoring-de-code-legacy-part-3-god-class-et-autres-techniques/</guid>

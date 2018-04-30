@@ -1,0 +1,233 @@
+---
+
+
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="description" content="DevCrafting web site & blog, about all sort of things around software development">
+	<meta name="author" content="Clément Bouillier">
+	<meta rel="canonical" href="/fr/blog/2018/04-la-schizophenie-des-outils-et-des-process/" />
+	<link rel="icon" type="image/png" href="/images/devCraftingFavIcon.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="/styles/custom.css" />
+	<link rel="stylesheet" href="/styles/FSharpFormatting/style.css" />
+	<title>La "schizophrénie" autour des outils et des processus - DevCrafting</title>
+
+	 
+</head>
+
+<body>
+	<div id="cookie-banner" style="display:none;">
+		<div id="cookie-banner-message">
+			Ce site utilise Google Analytics. En continuant à naviguer, vous nous autorisez à déposer un cookie à des fins de mesure
+			d'audience.
+			<a href="javascript:tagAnalyticsCNIL.CookieConsent.showInform()">En savoir plus ou s'opposer</a>.
+		</div>
+	</div>
+	<div id="inform-and-ask" style="display:none;">
+		<div id="inform-and-consent">
+			<div><b>Les cookies Google Analytics</b></div>
+			<div>
+                Ce site utilise des cookies de Google Analytics, ces cookies nous aident à identifier le contenu qui vous interesse le
+				plus ainsi qu'à repérer certains dysfonctionnements. Vos données de navigations sur ce site sont envoyées à Google Inc.
+            </div>
+			<div>
+                <button id="optout-button" name="optout" onclick="tagAnalyticsCNIL.CookieConsent.gaOptout();">S'opposer</button>
+				<button name="cancel" onclick="tagAnalyticsCNIL.CookieConsent.hideInform()">Accepter</button>
+            </div>
+        </div>
+        <div id="aknowledge-optout" style="display:none">
+            Nous avons bien pris en compte votre souhait de ne pas envoyer vos données de navigation à Google Inc.<br/>
+            <small>NB: ce message va s'effacer tout seul au bout de 5 secondes.</small>
+        </div>
+	</div>
+	<header>
+		<nav class="navbar navbar-devcrafting">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dc-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<a class="navbar-brand" href="/fr/">
+						<img class="devcrafting-small-logo" alt="DevCrafting" src="/images/devCraftingLogoDarkSmall.png" />
+						<img class="devcrafting-big-logo" alt="DevCrafting" src="/images/devCraftingLogoDarkTiny.png" />
+					</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="dc-navbar-collapse">
+					<ul class="nav navbar-nav">
+						 
+						<li><a href="/fr/services/">Services</a></li>
+						  
+						<li><a href="/fr/blog/">Blog</a></li>
+						  
+						<li><a href="/fr/contact/">Contact</a></li>
+						  
+						<li><a href="/fr/a-propos/">A propos</a></li>
+						 
+					</ul>
+					<div class="navbar-right">
+						<p class="social-links">
+							<a class="fa fa-twitter" title="Twitter @clem_bouillier" href="https://twitter.com/clem_bouillier"></a>
+							<a class="fa fa-github" title="GitHub @devcrafting" href="https://github.com/devcrafting"></a>
+							<a class="fa fa-linkedin" title="Linked In" href="https://www.linkedin.com/in/clementbouillier"></a>
+							<a class="fa fa-rss" title="RSS fr" href="/fr/rss.xml"></a>
+						</p>
+						
+						<p class="lang-switcher">
+							<span class="lang-mobile-only">Lang:</span> 
+							<a href="/fr/blog/2018/04-la-schizophenie-des-outils-et-des-process/">FR</a> 
+						</p>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-9">
+				
+<article itemscope itemtype="http://schema.org/Article">
+    <h1 itemprop="headline">La "schizophrénie" autour des outils et des processus</h1>
+    <div class="row">
+        <div class="col-sm-6 col-md-6" itemprop="keywords">
+            <span class="fa fa-tags"></span>
+            
+                <a href="/fr/tag/Agile/" class="label label-default">Agile</a>
+            
+                <a href="/fr/tag/outils/" class="label label-default">outils</a>
+            
+                <a href="/fr/tag/processus/" class="label label-default">processus</a>
+            
+            <span class="fa fa-comments"></span>
+<a href="http://www.devcrafting.com/fr/blog/2018/04-la-schizophenie-des-outils-et-des-process/#disqus_thread">Laisser un commentaire</a>
+
+        </div>
+        <div class="devcrafting-mobile-text-right col-sm-6 col-md-6">
+            <!-- TODO: nb comments + link => Disqus -->
+            <span class="fa fa-clock-o"></span>
+            <time itemprop="datePublished" datetime="2018-04-30T00:00:00.0000000">
+            lundi 30 avril 2018
+            </time>
+        </div>
+    </div>
+    <div class="devcrafting-article-body" itemprop="articleBody">
+    <p>Ouh les gros mots "outils" et "processus", surtout depuis que l'agilité est devenue populaire dans notre industrie. Parler de cela n'est pas simple. C'est un sujet sensible, voire polémique, et à mon sens, surtout en raison de certaines pratiques managériales "déviantes" associées (amalgamées?) aux outils et aux processus.</p>
+<p>Je propose dans cet article de mettre au clair mon ressenti sur tout cela. Merci de ne pas prendre tout cela de manière péremptoire ou catégorique de ma part. Le style est volontairement un peu provocateur pour susciter une réaction (positive). On verra pourquoi je parle de "schizophrénie".</p>
+<h2>Les processus et les outils</h2>
+<img alt="Diable FreeBSD" class="img-float-left" src="/images/devil.png" />
+<p>Revenons sur quelques vieux (ou pas) démons liés aux outils et aux processus. Le <a href="http://www.agilemanifesto.org">manifeste agile</a> donne plus de valeur aux interactions des individus qu'aux outils et aux processus, <strong>mais je rappelle</strong> que pour autant le manifeste ne réfute pas l'utilité de ces derniers. On peut se demander pourquoi les auteurs du manifeste ont tenu à mettre l'accent sur ce point...très probablement qu'ils ont croisés bon nombre de projets ayant trop insisté sur les outils et les processus? C'est mon interprétation, liée à mon expérience en tout cas.</p>
+<p>En effet, durant mes premières années d'expérience (de 2004 à 2008/2009), avant même d'avoir connaissance du manifeste agile, j'ai vécu (et on m'a reporté) des expériences où les outils et les processus étaient "la clé". A partir de ces expériences, je rejoins complètement les auteurs du manifeste agile: une trop forte orientation autour des outils et des processus ne garantit en rien la réussite des projets. L'image d'Epinal selon laquelle un projet IT serait équivalent à une production à la chaîne de voitures est manifestement fausse. Et pourtant cette croyance persiste.</p>
+<p>Les processus et les outils laissent croire qu'une industrialisation de l'IT est possible. A mon avis, l'industrialisation de l'IT n'a de sens que dans l'automatisation d'un certain nombre de tâches répétitives "basiques" (build, certains tests, déploiement...). La réalité que je constate encore aujourd'hui est pourtant bien différente : les outils et les processus sont utilisés de manière dévoyée, principalement imposés pour plus de contrôle des managers. Cette déviance est bien ancrée aujourd'hui dans les moeurs.</p>
+<p>Et pourtant, je pense qu'on pourrait utiliser les outils et les processus de manière constructive, au service de chacun dans l'équipe. Mais avant d'aborder cela, je voudrais revenir sur l'impact de l'agilité.</p>
+<h2>"L'avènement" de l'agilité avec Scrum</h2>
+<img alt="Cycles Scrum" class="img-float-left" src="/images/scrum.png" />
+<p>Armé du manifeste agile, certains se sont rapidement mis au sport national de vilipender les outils et les processus classiques. Et pourtant, l'agilité s'est répandu principalement avec Scrum, en mode "by the book", c'est-à-dire en appliquant religieusement les processus décrits dans un livre Scrum. C'est un peu un comble et en même temps, à mon sens, une raison de l'adoption rapide de Scrum. En effet, Scrum rentrait bien dans le cadre antérieur du "tout processus" (et outils). A contrario, XP parlait probablement trop de pratiques techniques. A noter que Scrum ou XP sont loin de supprimer tout processus, contrairement à ce qu'on entend de quelques agilo-sceptiques qui tentent de faire passer l'agilité pour une démarche "à l'arrache".</p>
+<p>Au niveau des outils, l'agilité a plébiscité le management visuel, notamment en mettant l'emphase sur la visibilité et la kinestésie (le fait de manipuler physiquement des post-its par exemple). Les avantages sont que cela permet de se resaisir de la notion d'outil et d'offir un support pour suivre le processus défini. Le travers à mon sens est d'avoir passé aux oubliettes les outils électroniques car moins "visibles" et sans kinestésie.</p>
+<p>Une autre mode s'est répandue : jeter des cartes sur un tableau Trello, cela peut vite devenir proche de l'arrache. C'est néanmoins atténué quand les personnes l'utilisant ont atteint une maturité leur permettant d'y voir plus clair. Mais je remarque tout de même que le travers est de faire un peu trop d'incantations sur sa capacité d'amélioration, sur son avancement...très largement dominé par le ressenti plus que le factuel, ce qui n'est pas très transparent à mon sens.</p>
+<h2>Avec Kanban, la schizophrénie pointe son nez</h2>
+<img alt="Tableau Kanban" class="img-float-left" src="/images/kanban.png" />
+<p>Depuis quelques années, le Kanban prend de l'ampleur. Cette démarche met fortement l'accent sur la mesure de son activité pour faire évoluer son processus. En effet, les cartes de contrôle et les diagrammes de flux cumulés (CFD = Cumulative Flow Diagram) permettent de suivre son activité et de mesurer l'amélioration ou la dégradation de la situation (<a href="http://www.areyouagile.com/tags/kanban/">cf. articles de Pablo Pernot</a>).</p>
+<p>Cependant, mesurer reste associé au contrôle, à l'usage dévié des mesures que certains managers pourraient faire. Alors comment mesurer tout en évitant les déviances connues par le passé? Comment se sortir du piège "moins d'outils" versus "plus de mesures"? Et ce sont ces questionnements qu'on peut qualifier de comportements schizophrènes.</p>
+<p>Pour contrer simplement cela, il faut accepter notre schizophrénie, ce qui peut être compliqué vu qu'un schizophrène n'a pas conscience de sa maladie. Acceptons donc tous cette part de schizophrénie, pour dépasser les clivages idéologiques et être plus en phase avec le manifeste agile.</p>
+<h2>Les outils et les processus à bon escient</h2>
+<img alt="Engrenage personnes, processus et outils" class="img-float-left" src="/images/people-processes-tools.png" />
+<p>Ma vision des processus est qu'ils doivent permettre de ne pas faire les choses à l'arrache et de se poser les bonnes questions pour faire le bon produit et le faire bien.</p>
+<p>Dans ce cadre, les outils doivent nous faciliter l'adoption et le suivi des processus de l'équipe (par l'équipe et non par les managers), ainsi que permettre l'automatisation d'un certain nombre de tâches répétives des processus définis.</p>
+<p>L'utilisation des outils permet alors à l'équipe de mieux se mesurer sur ses processus et le produit réalisé, ainsi que de clarifier ce qu'est le bon produit. Ce dernier point est la pierre angulaire pour se concentrer sur la création de valeur, plutôt que de faire de l'IT pour l'IT.</p>
+<h2>Management visuel ou outils électroniques ?</h2>
+<img alt="Plusieurs personnes se prenant la main" class="img-float-left" src="/images/together.jpg" />
+<p>A mon sens, ni l'outil du management visuel ni les outils électroniques ne sont la solution parfaite (comme souvent?!) : le premier souffre d'un manque de capacité d'automatisation, les seconds manquent de kinestésie.</p>
+<p>Ces outils restent par contre une source de défiance par crainte de détournements des données contenues (comparaison de vélocité, calcul de "vélocité individuelle"...). Ils doivent ABSOLUMENT rester en premier lieu utile à l'équipe et ne pas être détournés pour le management.</p>
+<p>Pour faciliter l'acceptation de cette contrainte par le management et le client, le maître mot est la transparence. Ne manipulez pas les données exposées au management et au client. Ils doivent s'approprier les données exposées pour <strong>partager une vision commune</strong> et non demander des adaptations de l'outil pour des reportings spécifiques. Une autre solution est que tout reporting spécifique soit fait en dehors des outils de l'équipe, même si cela peut créer des effets de bord qui font perdre le partage d'une vision commune.</p>
+<p>A noter que si le management ou le client ne sont pas prêts à accepter ces préconisations, alors il y a peu de chances qu'une démarche constructive voit le jour, l'opposition management/équipes/client sera la norme, chacun dans son silo avec des projets probablement pas très réussis.</p>
+<p>Voilà, je tenais à écrire cette clarification, pour mettre dans la balance les extrémismes du tout contrôle et du tout "agile".</p>
+
+
+
+    </div>
+    <!-- DISQUS integration -->
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+    this.page.url = 'http://www.devcrafting.com/fr/blog/2018/04-la-schizophenie-des-outils-et-des-process/';
+    //this.page.identifier = PAGE_IDENTIFIER; 
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//devcrafting-2.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</article>
+<script id="dsq-count-scr" src="//devcrafting-2.disqus.com/count.js" async></script>
+
+
+			</div>
+			<div class="col-sm-3">
+				<p>
+					<a class="twitter-timeline" data-theme="dark" data-link-color="#FAB81E" height="500" href="https://twitter.com/clem_bouillier">Tweets de Clément Bouillier</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<h4>Contact &amp; about</h4>
+					<p>This site is hosted on GitHub and is generated using <a href="https://github.com/tpetricek/FSharp.Formatting">F# Formatting</a> and <a href="http://dotliquidmarkup.org/">DotLiquid</a>. It was mostly inspired by <a href="http://tomasp.net">tomasp.net</a>,
+						created by <a href="https://github.com/tpetricek">Tomas Petricek</a>, with some F# code copied from <a href="https://github.com/tpetricek/tomasp.net">his site source code</a>.
+						For more info, see the <a href="https://github.com/devcrafting/devcrafting.github.io">website source on GitHub</a>.
+					</p>
+					<p>Please submit <a href="https://github.com/devcrafting/devcrafting.github.io/issues">issues &amp; corrections on GitHub</a>. Use <a href="https://github.com/devcrafting/devcrafting.github.io/pulls">pull requests</a> for minor corrections only.</p>
+					<ul>
+						<li><i class="fa fa-twitter"></i> Twitter: <a href="http://twitter.com/clem_bouillier">@clem_bouillier</a></li>
+						<li><i class="fa fa-github"></i> GitHub: <a href="https://github.com/devcrafting">@devcrafting</a></li>
+						<li><i class="fa fa-envelope"></i> Email: <a href="mailto:clement.bouillier@devcrafting.com">clement.bouillier@devcrafting.com</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<h4>License</h4>
+					<p>Unless explicitly mentioned, all articles on this site are licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Share Alike</a>.
+						All source code samples are licensed under Apache 2.0.
+					</p>
+					<p style="text-align:center;margin-top:15px;"><img src="/images/cc-by-sa.png" alt="CC BY SA License logo" /></p>
+					<h4>Privacy</h4>
+					<a href="javascript:tagAnalyticsCNIL.CookieConsent.gaOptout()">Click here</a> to suppress audience measure tool from
+					Google.
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+	<script src="/scripts/main.js"></script>
+	<script src="/scripts/cookies.js"></script>
+	<script>
+        tagAnalyticsCNIL.CookieConsent = tagAnalyticsCNIL.CookieConsentBuilder('UA-52462933-1');
+        tagAnalyticsCNIL.CookieConsent.start();
+    </script>
+	<script id="dsq-count-scr" src="//devcrafting-2.disqus.com/count.js" async></script>
+
+</body>
+
+</html>
