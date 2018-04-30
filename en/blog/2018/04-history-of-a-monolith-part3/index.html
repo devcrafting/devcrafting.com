@@ -11,14 +11,14 @@
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<meta name="description" content="DevCrafting web site & blog, about all sort of things around software development">
 	<meta name="author" content="Clément Bouillier">
-	<meta rel="canonical" href="/en/blog/2018/01-history-of-a-monolith-part2/" />
+	<meta rel="canonical" href="/en/blog/2018/04-history-of-a-monolith-part3/" />
 	<link rel="icon" type="image/png" href="/images/devCraftingFavIcon.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 		crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="/styles/custom.css" />
 	<link rel="stylesheet" href="/styles/FSharpFormatting/style.css" />
-	<title>History of a monolith: organisation evolution over the years - DevCrafting</title>
+	<title>History of a monolith: getting bigger and bigger... - DevCrafting</title>
 
 	 
 </head>
@@ -86,7 +86,7 @@
 						
 						<p class="lang-switcher">
 							<span class="lang-mobile-only">Lang:</span> 
-							<a href="/en/blog/2018/01-history-of-a-monolith-part2/">EN</a> 
+							<a href="/en/blog/2018/04-history-of-a-monolith-part3/">EN</a> 
 						</p>
 						
 					</div>
@@ -99,7 +99,7 @@
 			<div class="col-sm-9">
 				
 <article itemscope itemtype="http://schema.org/Article">
-    <h1 itemprop="headline">History of a monolith: organisation evolution over the years</h1>
+    <h1 itemprop="headline">History of a monolith: getting bigger and bigger...</h1>
     <div class="row">
         <div class="col-sm-6 col-md-6" itemprop="keywords">
             <span class="fa fa-tags"></span>
@@ -108,41 +108,40 @@
             
                 <a href="/en/tag/agile/" class="label label-default">agile</a>
             
+                <a href="/en/tag/Organization/" class="label label-default">Organization</a>
+            
                 <a href="/en/tag/history-of-a-monolith/" class="label label-default">history-of-a-monolith</a>
             
             <span class="fa fa-comments"></span>
-<a href="http://www.devcrafting.com/en/blog/2018/01-history-of-a-monolith-part2/#disqus_thread">Leave a comment</a>
+<a href="http://www.devcrafting.com/en/blog/2018/04-history-of-a-monolith-part3/#disqus_thread">Leave a comment</a>
 
         </div>
         <div class="devcrafting-mobile-text-right col-sm-6 col-md-6">
             <!-- TODO: nb comments + link => Disqus -->
             <span class="fa fa-clock-o"></span>
-            <time itemprop="datePublished" datetime="2018-01-31T00:00:00.0000000">
-            Wednesday, January 31, 2018
+            <time itemprop="datePublished" datetime="2018-04-30T00:00:00.0000000">
+            Monday, April 30, 2018
             </time>
         </div>
     </div>
     <div class="devcrafting-article-body" itemprop="articleBody">
-    <p>In the <a href="/en/blog/2017/11-history-of-a-monolith-part1/">first part of this series</a>, I focused on the genesis of the monolith we started at the end of 2005. I left the project in early 2007. It was planned to grow quickly, then the team would have to adapt (in size and more...). I came back on the project in 2009, this post highlights new challenges we faced from organisational point of view, evolution we made (lots of experiments) and consequences until 2012 when I left again.</p>
-<h2>Back on board</h2>
-<img alt="Noah's ark illustrating re-integration of the team" src="/images/noah-ark.png" class="img-float-left"/>
-<p>In 2009, I came back in a team of 12 developers, whereas 2 years before, I left a team of 6 developers. It doubled in 2 years!</p>
-<p>The recruiting had been quite hard, with some issues to find people with the "right enough" technical skills. The team added a new interview process: one hour prepared questions and then discussions with a team member on their answers. Questions were based on code taken from "bad examples" found in the application source code. It allowed to better qualify technical skills, but it was also harder to find people, we had to limit our expectations to be able to onboard new developers.</p>
-<p>We could wonder if we were not recruiting too many developers. Still there was lots of expectations on new features to add and to expand and integrate with other applications of the company.</p>
-<h2>Far less agile...</h2>
-<img alt="Illustrate an agile team working together" src="/images/together.jpg" class="img-float-left"/>
-<p>The team leader was doing the interface/proxy for every developers with the business team. Given the team size and heterogeneousness of people communication skills, he thought it was simpler to proxy, even if developers were still allowed/encouraged to contact the business team. By the way, it was not natural to developers, I remark people tend to prefer to hide behind someone and just keep developing what the manager ask for. I even already heard that from several developers! He was under high pressure. He could have hired business analysts, but it was not the model he has in mind. He was convinced that developers closer to business is better. By the way, it was time to release pressure and bottleneck.</p>
-<p>Since I started to read agile books in 2008 (and realized we were "sort of" agile back in 2005-2007), I proposed to experiment it. A key thing was developers had to face business people, to be much more involved in <strong>building the right product</strong>, and <strong>not just "building it right"</strong>. Then, the team leader had to take a position of coach to help developers in their new position. Practicing all of this was also new to me.</p>
-<p>We mainly struggled to find the right practices for a team of 12 persons. It was a bit too big to make planning pokers, daily meetings or retrospectives correctly. We adapted some practices, feeling it was agile to adapt to context. Managers were saying that maximum of 8 was written in the Scrum book, but we did not care. Even if we rejected the "by the book" approach, we should have considered issues we had as "weak signals".</p>
-<p>Retrospectively, I would say that we experienced some drawbacks of a monolith (more to come below). Also, we were "victim" of the <a href="http://melconway.com/Home/Conways_Law.html">Conway lay</a>: as a single big team, we tried to build one big application, i.e a monolith. We could have broken the team and the application in several pieces, it would have probably avoided the monolith and simplified agile practices. It does not mean that each sub-team would have been completely separated. We could have kept some synchronisation meetings to learn from each others.</p>
-<p>By the way, with our new organization and adaptative approach, we managed to deliver value to a very statisfied business team, so it was not so dark.</p>
-<h2>Slow and expensive delivery</h2>
-<img alt="Slow and expensive delivery" src="/images/slow-and-complex.png" class="img-float-left"/>
-<p>Delivery was more and more painful, because it needed lots of synchronisation between team members to gather what has to be delivered. We had no practices like Feature Flipping, but I am not sure it would have really simplified the delivery process (at this time).</p>
-<p>We were using TFS Version Control, and we avoided branches as much as possible. Branching was reserved for some "long-term"/isolated subjects. We tried to avoid such subjects also since it is really difficult to release them and it creates stocks of undelivered features. But even with few branches we had to do some merge and it was really painful.</p>
-<p>The monolith was hurting here. We worked a lot on automation of different tasks, it helped, but did not removed main issues due to monolith. Note we were not really aware of this potential root cause at this time.</p>
-<h2>Next: technical point of view...</h2>
-<p>I just described some issues we faced and tried to solve. I mostly linked it to the monolith we were growing years after years without knowing what was a monolith at this time. In the next post, I will expose some technical issues we had and solutions we found.</p>
+    <p>In the <a href="/en/tag/history-of-a-monolith">previous parts of this series</a>, I focused on my two first (quite long) takes on a project we started at the end of 2005. I left the project in early 2007, I came back in 2009, and left again in 2012. and this post is about a new come back (for a bit more than a year now) on this 12 years old project. I will try to expose lessons learned from this experience, from organizational and technical points of view.</p>
+<h2>Back on "this project"</h2>
+<img alt="Getting bigger project illustrated with a kind of big muscles man" src="/images/getBigger.png" class="img-float-left"/>
+<p>In 2007, the team had 6 members, then 15 members in 2012, and then 30 members in 2017. It doubles every 5 years! You could wonder how is it possible? In fact, more than one project, it is several projects, more and more diversified, but still around the core business of customer relationship management. So why do I speak about one project? Because it (at least tries to) works like a single team, sharing practices (technical and more), common tools, collectively owning code of few different aplications (mainly one big monolith around the core). In fact, around 8 persons are already autonomous, less dependents on the rest of the team, because part of the code has been splitted and isolated in separate modules. Still there is a quite cohesive team around the main monolith.</p>
+<p>How did we end up with a team of 20+ members working on the same application? Projects from different sponsors came to the table because it was somewhat related to customer relationship, and then it was evidence that it should be in THE application, I would say the main argument was to avoid consistency issues (remember that in 2005, we migrated from Lotus Notes, a silos application). The application was well-known as efficient and well designed, people were attracted and it was considered as a referential for some customers related data. We probably confused application and people organization. The efficiency was not in the application but in the people building it and their organization, practices and tools.</p>
+<h2>Limits of this model</h2>
+<img alt="Reaching limits illustrated with a steeper and steeper graphs" src="/images/reachingLimits.jpg" class="img-float-left"/>
+<p>Retrospectively, I would say that even in 2012, we were already reaching the limit of a too big team working on one single application built as a monolith. When I came back at the beginning of 2017, part of the team was more autonomous as I said, and some experiments were in progress to split some parts from the monolith. Still, there was absolutely no splitting in team organization: same practices, people sharing time between monolith and new splitted modules. The split was only in code.</p>
+<p>From this experience, my point of view is that enforcing collective ownership of several applications/modules with a too big team is not efficient. I don't want to write in stone some numbers, the more you are the more it is complex to keep everyone on the same level of information, because numbers of interactions increase exponentially. For example, with 3 persons, there are 3 communication one-to-one channels (we can consider that it is part of the equation, even if we could consider 3 and more people channels). With 4 persons, there are 6. With 5, there are 10. With 8, there are 23...how to exchange common knowledge and practices with increasing size? I would say that it is easier to adapt our organization to limit this.</p>
+<h2>Other side-effects</h2>
+<img alt="Reaching limits illustrated with a steeper and steeper graphs" src="/images/sideEffects.jpg" class="img-float-left"/>
+<p>When you have too big teams, you get other side-effects. It is harder to have people aligned on the same way of working. Even if I don't say that I want one single brain in a team, I experienced that it is simpler to work efficiently with people working mostly the same way. Then, you have to be careful of they don't forget to get insights from outside their team: be sure they get out of their confort zone.</p>
+<p>There was another split of the team in two different locations (30km away). Distance is another bottleneck of communication, we often talk about collocated teams in agile approaches, I experienced the side-effects of the opposite. It is not impossible, but it is harder for sure, thus it requires extra effort to stay synchronized.</p>
+<h2>Potential target</h2>
+<img alt="Target" src="/images/target.jpg" class="img-float-left"/>
+<p>I would like to experiment smaller teams with dedicated functional scope, with communities of practices across teams to get some insights. We tried a bit on some sub-projects, but still with too much friction with existing practices and efforts from team members to stay in the existing "monolithic organization". I think that we can call it like that, that's no mystery if we built a monolith, as the <a href="http://melconway.com/Home/Conways_Law.html">Conway's law</a> says. It can be frightening to get out of its confort zone, but I would say that it is necessary at some point, avoiding to fight against normal communication issues at any cost.</p>
+<p>In the next post, I will focus more on design and technical aspects.</p>
 
 
 
@@ -151,7 +150,7 @@
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-    this.page.url = 'http://www.devcrafting.com/en/blog/2018/01-history-of-a-monolith-part2/';
+    this.page.url = 'http://www.devcrafting.com/en/blog/2018/04-history-of-a-monolith-part3/';
     //this.page.identifier = PAGE_IDENTIFIER; 
 };
 (function() { // DON'T EDIT BELOW THIS LINE

@@ -4,6 +4,16 @@
     <link>http://www.devcrafting.com</link>
     <description>Articles about software craftsmanship, Agile, software architecture and design</description>
     <item>
+      <title>History of a monolith: getting bigger and bigger...</title>
+      <link>http://www.devcrafting.com/en/blog/2018/04-history-of-a-monolith-part3/</link>
+      <guid>http://www.devcrafting.com/en/blog/2018/04-history-of-a-monolith-part3/</guid>
+      <pubDate>Sun, 29 Apr 2018 22:00:00 GMT</pubDate>
+      <description>&lt;p&gt;In the &lt;a href="/en/tag/history-of-a-monolith"&gt;previous parts of this series&lt;/a&gt;, I focused on my two first (quite long) takes on a project we started at the end of 2005. I left the project in early 2007, I came back in 2009, and left again in 2012. and this post is about a new come back (for a bit more than a year now) on this 12 years old project. I will try to expose lessons learned from this experience, from organizational and technical points of view.&lt;/p&gt;
+
+
+</description>
+    </item>
+    <item>
       <title>History of a monolith: technical evolution with the rise of keywords</title>
       <link>http://www.devcrafting.com/en/blog/2018/02-history-of-a-monolith-part2bis/</link>
       <guid>http://www.devcrafting.com/en/blog/2018/02-history-of-a-monolith-part2bis/</guid>
