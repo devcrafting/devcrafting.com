@@ -4,6 +4,16 @@
     <link>http://www.devcrafting.com</link>
     <description>Articles about software craftsmanship, Agile, software architecture and design</description>
     <item>
+      <title>History of a monolith: split it ?</title>
+      <link>http://www.devcrafting.com/en/blog/2018/07-history-of-a-monolith-part3bis/</link>
+      <guid>http://www.devcrafting.com/en/blog/2018/07-history-of-a-monolith-part3bis/</guid>
+      <pubDate>Wed, 18 Jul 2018 22:00:00 GMT</pubDate>
+      <description>&lt;p&gt;In &lt;a href="/en/blog/2018/04-history-of-a-monolith-part3/"&gt;the previous post&lt;/a&gt;, I talked about organizational changes I observed on my third contract in 12 years on a monolith that grew up quickly with a team of 3 up to 20+ people today. In this post, I focus on design and technical changes we started one year ago.&lt;/p&gt;
+
+
+</description>
+    </item>
+    <item>
       <title>History of a monolith: getting bigger and bigger...</title>
       <link>http://www.devcrafting.com/en/blog/2018/04-history-of-a-monolith-part3/</link>
       <guid>http://www.devcrafting.com/en/blog/2018/04-history-of-a-monolith-part3/</guid>

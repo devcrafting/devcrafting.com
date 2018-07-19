@@ -1,0 +1,225 @@
+---
+
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="description" content="DevCrafting web site & blog, about all sort of things around software development">
+	<meta name="author" content="Clément Bouillier">
+	<meta rel="canonical" href="/en/blog/2018/07-history-of-a-monolith-part3bis/" />
+	<link rel="icon" type="image/png" href="/images/devCraftingFavIcon.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="/styles/custom.css" />
+	<link rel="stylesheet" href="/styles/FSharpFormatting/style.css" />
+	<title>History of a monolith: split it ? - DevCrafting</title>
+
+	 
+</head>
+
+<body>
+	<div id="cookie-banner" style="display:none;">
+		<div id="cookie-banner-message">
+			Ce site utilise Google Analytics. En continuant à naviguer, vous nous autorisez à déposer un cookie à des fins de mesure
+			d'audience.
+			<a href="javascript:tagAnalyticsCNIL.CookieConsent.showInform()">En savoir plus ou s'opposer</a>.
+		</div>
+	</div>
+	<div id="inform-and-ask" style="display:none;">
+		<div id="inform-and-consent">
+			<div><b>Les cookies Google Analytics</b></div>
+			<div>
+                Ce site utilise des cookies de Google Analytics, ces cookies nous aident à identifier le contenu qui vous interesse le
+				plus ainsi qu'à repérer certains dysfonctionnements. Vos données de navigations sur ce site sont envoyées à Google Inc.
+            </div>
+			<div>
+                <button id="optout-button" name="optout" onclick="tagAnalyticsCNIL.CookieConsent.gaOptout();">S'opposer</button>
+				<button name="cancel" onclick="tagAnalyticsCNIL.CookieConsent.hideInform()">Accepter</button>
+            </div>
+        </div>
+        <div id="aknowledge-optout" style="display:none">
+            Nous avons bien pris en compte votre souhait de ne pas envoyer vos données de navigation à Google Inc.<br/>
+            <small>NB: ce message va s'effacer tout seul au bout de 5 secondes.</small>
+        </div>
+	</div>
+	<header>
+		<nav class="navbar navbar-devcrafting">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dc-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<a class="navbar-brand" href="/en/">
+						<img class="devcrafting-small-logo" alt="DevCrafting" src="/images/devCraftingLogoDarkSmall.png" />
+						<img class="devcrafting-big-logo" alt="DevCrafting" src="/images/devCraftingLogoDarkTiny.png" />
+					</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="dc-navbar-collapse">
+					<ul class="nav navbar-nav">
+						 
+						<li><a href="/en/services/">Services</a></li>
+						  
+						<li><a href="/en/blog/">Blog</a></li>
+						  
+						<li><a href="/en/contact/">Contact</a></li>
+						 
+					</ul>
+					<div class="navbar-right">
+						<p class="social-links">
+							<a class="fa fa-twitter" title="Twitter @clem_bouillier" href="https://twitter.com/clem_bouillier"></a>
+							<a class="fa fa-github" title="GitHub @devcrafting" href="https://github.com/devcrafting"></a>
+							<a class="fa fa-linkedin" title="Linked In" href="https://www.linkedin.com/in/clementbouillier"></a>
+							<a class="fa fa-rss" title="RSS en" href="/en/rss.xml"></a>
+						</p>
+						
+						<p class="lang-switcher">
+							<span class="lang-mobile-only">Lang:</span> 
+							<a href="/en/blog/2018/07-history-of-a-monolith-part3bis/">EN</a> 
+						</p>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-9">
+				
+<article itemscope itemtype="http://schema.org/Article">
+    <h1 itemprop="headline">History of a monolith: split it ?</h1>
+    <div class="row">
+        <div class="col-sm-6 col-md-6" itemprop="keywords">
+            <span class="fa fa-tags"></span>
+            
+                <a href="/en/tag/legacy/" class="label label-default">legacy</a>
+            
+                <a href="/en/tag/architecture/" class="label label-default">architecture</a>
+            
+                <a href="/en/tag/DDD/" class="label label-default">DDD</a>
+            
+                <a href="/en/tag/CQRS/" class="label label-default">CQRS</a>
+            
+                <a href="/en/tag/history-of-a-monolith/" class="label label-default">history-of-a-monolith</a>
+            
+            <span class="fa fa-comments"></span>
+<a href="http://www.devcrafting.com/en/blog/2018/07-history-of-a-monolith-part3bis/#disqus_thread">Leave a comment</a>
+
+        </div>
+        <div class="devcrafting-mobile-text-right col-sm-6 col-md-6">
+            <!-- TODO: nb comments + link => Disqus -->
+            <span class="fa fa-clock-o"></span>
+            <time itemprop="datePublished" datetime="2018-07-19T00:00:00.0000000">
+            Thursday, July 19, 2018
+            </time>
+        </div>
+    </div>
+    <div class="devcrafting-article-body" itemprop="articleBody">
+    <p>In <a href="/en/blog/2018/04-history-of-a-monolith-part3/">the previous post</a>, I talked about organizational changes I observed on my third contract in 12 years on a monolith that grew up quickly with a team of 3 up to 20+ people today. In this post, I focus on design and technical changes we started one year ago.</p>
+<h2>About monoliths, modules, applications and microservices</h2>
+<img alt="Monolith versus Microservices, with modular monolith and distributed monolith" src="/images/Monolith-Microservices.png" class="img-float-left"/>
+<p>The difference between modules and applications/products is tight. Sometimes, because the domains seem different, people split in different applications/products. What we call modules in the team I am working in are in fact parts of the monolith, that could be also a separate application. We could also say that modules are then DDD bounded contexts, a model for a given sub-domain, a well defined separation of business concerns of the domain, with its own ubiquituous language (<a href="http://gorodinski.com/blog/2013/04/29/sub-domains-and-bounded-contexts-in-domain-driven-design-ddd/">see this article for more details on bounded contexts/sub-domains</a>. Then I would define the monolith as a single application with too many modules which are too tighly coupled.</p>
+<p>When modules are splitted, some would say that they are microservices. I mostly agree with that even if I am not confortable with the hype of this keyword, leading to too technical point of view. Being (trying to be) a DDD practioner, I constantly fight the fact that microservices are part of DDD strategic design, but there are too often reduced to technical choices. Note that we could split modules keeping them in the same application, a "well-done" monolith, and also that we could endup with a distributed monolith (probably the worst) if we jump too quickly in the microservices hype!</p>
+<p>So please, before speaking about modules or microservices, explore your domain in-depth to let emerge bounded contexts that are adapted to your domain. You can do that with <a href="https://www.slideshare.net/ziobrando/event-storming-recipes">Event Storming</a> for example.</p>
+<h2>From legacy monolith to...</h2>
+<img alt="Cells to represent contexts" src="/images/cells.jpg" class="img-float-left"/>
+<p>As I explained in some of the <a href="/en/tag/history-of-a-monolith">previous posts of the series</a>, we had some issues with our monolith, especially around team organization and technical constraints. It is difficult to be (I insist on "be", not "do"!) agile with more than 20 people dependent on a single release workflow. From technical point of view, it becomes more and more difficult to use new things, we are constrained by legacy choices and it can be challenging to isolate things.</p>
+<p>We wanted to avoid a big bang migration to a new solution, we prefered to split few parts one by one with smaller sub-team. We initiated the change one year ago with new requirements. We wanted to avoid to put these new requirements in the monolith. Then, we were able to design with a lot more options, we felt more freedom to design the right model for the target sub-domain. It was not a simple new start, we made lots of experiments, mostly around implementation that was far from easy at first. It changed a lot from what people are used to in terms of design and implementation. Some would consider this experiments as wasted/unproductive time, I prefer to talk about learning effort.</p>
+<p>Note also that it created a more focused sub-team. I would say that sort of <a href="http://melconway.com/Home/Conways_Law.html">Conway's law</a> applied here again, not sure if it was the autonomous team organization that created a more isolated application or the reverse. We decided to split it "upfront" from the monolith, then the sub-team organized itself to be more and more autonomous from the rest of the team. I would say that it was an "on-purpose use of Conway's law", I recommend to do that.</p>
+<p>One year later, we have our first isolated modules in production and some people in the team are able to maintain them. It is a very small part of the whole monolith, but we maintain the pace of migration with new requirements. We are extending a bit the migration to other modules and more people are involved, yet another challenge. The main takeover of this experience is to do small things, instead of planning/launching big ones. The main strategy used here is called "<a href="http://domainlanguage.com/wp-content/uploads/2016/04/GettingStartedWithDDDWhenSurroundedByLegacySystemsV1.pdf">Bubble Context</a>" : implement new things in an isolated "context" which grows as a bubble and replace existing legacy step by step. Be careful to not build the next monolith as the context grows.</p>
+<h2>Practical technical split</h2>
+<img alt="Hitting an egg with a hammer could look like what we are doing using always the same tools" src="/images/egg-and-hammer.jpg" class="img-float-left"/>
+<p>The team tried to split the monolith before I came back in the team. From these experiments, I saw different patterns that are probably not really good practices to split a monolith. They are also patterns criticized by microservices gurus.</p>
+<p>The first main pattern is to use the "same database" for several modules. I don't mean physically, you can still use the same database server, but data must be isolated from one module to another. For example, using two SQL databases on the same server is ok, but do not link them or access one from another module than its owner (i.e the module that uses it as its datastore). Using schema in the same database is more likely to be perversed, since creating cross-schema constraints, views or stored procedures is very easy. Using the same Event Store (like <a href="https://eventstore.org/">EventStore.org</a>) for several sounds ok, since streams are mostly isolated and it can be viewed as a database with event bus features used to communicate between modules. Note that using a shared infrastructure can still be a bad dependency from microservices perspective. It can appear like strict rules, it should rather be guidelines, with few exceptions. Violating these "rules" creates undesirable dependencies, or if they are desirable, then you should assume they are!</p>
+<p>Another pattern is to systematically use the same database (SQL by default since many years...). The worst is to start modelling the database before modelling the domain, it adds lots of (useless?!) contraints. It is hard since most of developers were born in the "SQL golden age" (1970/2010?), it was one of first lessons learned at school. I hope it will be easier in next years, with people learning more NoSQL databases, but it will take some times to change. In our team, we used ElasticSearch for full-text indexing of internet content, Neo4J to request graphs which were too slow in SQL, and EventStore to store events with event sourced code.</p>
+<p>We often say "when all you have is a hammer, everything looks like a nail", that's how we end up with stereotypical systems mostly built around CRUD (Create/Read/Update/Delete) with an popular ORM, and many other source of accidental complexity...instead of building systems with a high focus on domain language and with simpler technical constructs. Note I used "simpler": they can seem complicated because it is not in our confort zone, that's why we can't say there are inherently complex. Once you get used to it, it is far simpler than huge frameworks from my point of view. I think to Event Sourcing and CQRS for example.</p>
+<h2>Next ?</h2>
+<p>I cannot foresee the future, but I hope it will continue on the initiated path. I will try to give more feedbacks later.</p>
+
+
+
+    </div>
+    <!-- DISQUS integration -->
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+    this.page.url = 'http://www.devcrafting.com/en/blog/2018/07-history-of-a-monolith-part3bis/';
+    //this.page.identifier = PAGE_IDENTIFIER; 
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//devcrafting-1.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</article>
+<script id="dsq-count-scr" src="//devcrafting-1.disqus.com/count.js" async></script>
+
+
+			</div>
+			<div class="col-sm-3">
+				<p>
+					<a class="twitter-timeline" data-theme="dark" data-link-color="#FAB81E" height="500" href="https://twitter.com/clem_bouillier">Tweets de Clément Bouillier</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<h4>Contact &amp; about</h4>
+					<p>This site is hosted on GitHub and is generated using <a href="https://github.com/tpetricek/FSharp.Formatting">F# Formatting</a> and <a href="http://dotliquidmarkup.org/">DotLiquid</a>. It was mostly inspired by <a href="http://tomasp.net">tomasp.net</a>,
+						created by <a href="https://github.com/tpetricek">Tomas Petricek</a>, with some F# code copied from <a href="https://github.com/tpetricek/tomasp.net">his site source code</a>.
+						For more info, see the <a href="https://github.com/devcrafting/devcrafting.github.io">website source on GitHub</a>.
+					</p>
+					<p>Please submit <a href="https://github.com/devcrafting/devcrafting.github.io/issues">issues &amp; corrections on GitHub</a>. Use <a href="https://github.com/devcrafting/devcrafting.github.io/pulls">pull requests</a> for minor corrections only.</p>
+					<ul>
+						<li><i class="fa fa-twitter"></i> Twitter: <a href="http://twitter.com/clem_bouillier">@clem_bouillier</a></li>
+						<li><i class="fa fa-github"></i> GitHub: <a href="https://github.com/devcrafting">@devcrafting</a></li>
+						<li><i class="fa fa-envelope"></i> Email: <a href="mailto:clement.bouillier@devcrafting.com">clement.bouillier@devcrafting.com</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<h4>License</h4>
+					<p>Unless explicitly mentioned, all articles on this site are licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Share Alike</a>.
+						All source code samples are licensed under Apache 2.0.
+					</p>
+					<p style="text-align:center;margin-top:15px;"><img src="/images/cc-by-sa.png" alt="CC BY SA License logo" /></p>
+					<h4>Privacy</h4>
+					<a href="javascript:tagAnalyticsCNIL.CookieConsent.gaOptout()">Click here</a> to suppress audience measure tool from
+					Google.
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+	<script src="/scripts/main.js"></script>
+	<script src="/scripts/cookies.js"></script>
+	<script>
+        tagAnalyticsCNIL.CookieConsent = tagAnalyticsCNIL.CookieConsentBuilder('UA-52462933-1');
+        tagAnalyticsCNIL.CookieConsent.start();
+    </script>
+	<script id="dsq-count-scr" src="//devcrafting-1.disqus.com/count.js" async></script>
+
+</body>
+
+</html>
